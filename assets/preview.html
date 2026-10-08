@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  :root {
+    --accent: rgb(123,216,143);
+    --text: rgb(247,241,255);
+    --muted: rgb(186,182,192);
+    --dim: rgb(105,103,108);
+    --border: rgb(82,80,83);
+    --card: rgb(54,53,55);
+    --term: rgb(30,29,31);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1280px; height: 720px; }
+  body {
+    background: radial-gradient(1200px 600px at 20% 0%, #2c3a30 0%, #171618 60%);
+    font-family: -apple-system, "SF Pro Display", "Helvetica Neue", sans-serif;
+    color: var(--text);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 30px;
+  }
+  .head { text-align: center; }
+  .head h1 { font-size: 46px; font-weight: 700; letter-spacing: -0.5px; }
+  .head h1 span { color: var(--accent); }
+  .head p { margin-top: 10px; font-size: 21px; color: var(--muted); }
+  .win {
+    width: 980px; background: var(--term); border-radius: 12px; overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.06);
+  }
+  .bar { height: 34px; background: #2a292b; display: flex; align-items: center; gap: 8px; padding: 0 14px; }
+  .bar i { width: 12px; height: 12px; border-radius: 50%; display: block; }
+  .term {
+    font-family: "JetBrains Mono", "SF Mono", Menlo, monospace; font-size: 17px; line-height: 1.55;
+    padding: 18px 22px 16px; white-space: pre;
+  }
+  .accent { color: var(--accent); } .b { font-weight: 700; }
+  .muted { color: var(--muted); } .dim { color: var(--dim); }
+  .card { background: var(--card); padding: 16px 18px; margin: 10px 0 12px; }
+  .rule { border-top: 1px solid var(--border); margin: 6px 0; }
+  .row { display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+  <div class="head">
+    <h1>pi-<span>modelshortcuts</span></h1>
+    <p>Bind <span class="accent">/quick</span>, <span class="accent">/heavy</span>, or your own names to models. Switch in one command.</p>
+  </div>
+  <div class="win">
+    <div class="bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i></div>
+    <div class="term"><span class="muted">/thinker → anthropic/claude-sonnet-5-5 · thinking max</span>
+<div class="card"><span class="accent b">Model shortcuts</span>
+
+<span class="accent b">/quick  </span>   anthropic/claude-haiku-5-5<span class="muted">  thinking:low</span>
+<span class="accent b">/heavy  </span>   anthropic/claude-opus-5-5<span class="muted">  thinking:high</span>
+<span class="accent b">/weird  </span>   openai/gpt-5.2<span class="muted">  thinking:medium</span>
+<span class="accent b">/thinker</span>   anthropic/claude-sonnet-5-5<span class="muted">  thinking:max</span><span class="accent">  ● active</span>
+
+<span class="dim">/modelshortcuts setup  add, rename, rebind or remove commands</span></div><div class="rule"></div><span style="background:var(--text)"> </span>
+<div class="rule"></div><div class="row"><span class="dim">~/project</span><span class="dim">(anthropic) claude-sonnet-5-5 • max</span></div><span class="accent">/thinker</span></div>
+  </div>
+</body>
+</html>
